@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "811163646496",
+    "project_id": "gui-login-y-registro",
+    "storage_bucket": "gui-login-y-registro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811163646496:android:4c3c02d6a08f6fd9929a45",
+        "android_client_info": {
+          "package_name": "com.example.guiloginyregistro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAwNVIfMiEKBAiqyySkqNbcon4XMy7Pzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
