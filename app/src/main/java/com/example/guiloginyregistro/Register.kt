@@ -12,8 +12,6 @@ import com.google.firebase.auth.FirebaseAuth
 
 class Register : AppCompatActivity() {
 
-    private lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -27,6 +25,7 @@ class Register : AppCompatActivity() {
         title = "Autenticación"
 
         val registrar : ImageButton = findViewById(R.id.Registrar)
+        val cancel : ImageButton = findViewById(R.id.Cancelar)
         val email : EditText = findViewById(R.id.campoEmail)
         val pass : EditText = findViewById(R.id.campoContraseña)
         val confPass : EditText = findViewById(R.id.campoRepetirContraseña)
@@ -34,7 +33,7 @@ class Register : AppCompatActivity() {
         registrar.setOnClickListener{
             if (email.text.isNotEmpty() && pass.text.isNotEmpty() && (pass.text == confPass.text)){
 
-                auth.createUserWithEmailAndPassword(email.text.toString(),
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(email.text.toString(),
                     pass.text.toString()).addOnCompleteListener {
                         if (it.isSuccessful){
                             Log.d(TAG, "Creado nuevo usuario")
@@ -45,6 +44,10 @@ class Register : AppCompatActivity() {
                         }
                 }
             }
+        }
+
+        cancel.setOnClickListener {
+            onBackPressed()
         }
     }
 

@@ -12,7 +12,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.inicio)
@@ -29,17 +29,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun acceder(){
 
-        title = "Autenticación"
-
         val login : Button = findViewById(R.id.login)
         val registrar : Button = findViewById(R.id.reg)
-        val email : EditText = findViewById(R.id.campoEmail)
-        val pass : EditText = findViewById(R.id.campoContraseña)
+        val email : EditText = findViewById(R.id.correo)
+        val pass : EditText = findViewById(R.id.pass)
 
         login.setOnClickListener{
             if (email.text.isNotEmpty() && pass.text.isNotEmpty()){
 
-                auth.signInWithEmailAndPassword(email.text.toString(),
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(email.text.toString(),
                     pass.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful){
                         Log.d(ContentValues.TAG, "Login de usuario")

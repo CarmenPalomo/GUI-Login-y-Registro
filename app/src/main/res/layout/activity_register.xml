@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gris"
     tools:context=".Register">
 
     <androidx.appcompat.widget.Toolbar
@@ -24,6 +25,7 @@
         android:layout_marginTop="80dp"
         android:gravity="center"
         android:text="@string/nombre"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -49,10 +51,11 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:gravity="center"
-        android:text="Email:"
         android:layout_below="@id/Nombre"
         android:layout_alignStart="@id/Nombre"
+        android:gravity="center"
+        android:text="Email:"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -82,6 +85,7 @@
         android:layout_alignStart="@id/Nombre"
         android:gravity="center"
         android:text="@string/contrasegna"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -105,6 +109,7 @@
         android:layout_alignStart="@id/Contrasegna"
         android:gravity="center"
         android:text="@string/repetir_contrasena"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -128,6 +133,7 @@
         android:layout_alignStart="@id/Nombre"
         android:gravity="center"
         android:text="@string/sexo"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -144,13 +150,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hombre"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/Mujer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:text="@string/mujer"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="16sp" />
     </RadioGroup>
 
@@ -162,8 +175,9 @@
         android:layout_alignStart="@id/Nombre"
         android:gravity="center"
         android:text="@string/nacionalidad"
+        android:textColor="@color/black"
         android:textSize="16sp"
-        android:textStyle="bold"  />
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/EscogeNacion"
@@ -172,6 +186,7 @@
         android:layout_alignBaseline="@id/Pais"
         android:layout_alignStart="@id/campoNombre"
         android:layout_alignEnd="@id/campoNombre"
+        android:backgroundTint="@color/black"
         android:entries="@array/Nacionalidad"
         android:minHeight="48dp"
         android:scrollbarSize="16dp" />
@@ -184,6 +199,7 @@
         android:layout_alignStart="@id/Nombre"
         android:gravity="center"
         android:text="@string/aficiones"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -194,6 +210,7 @@
         android:layout_alignBaseline="@id/Aficion"
         android:layout_alignStart="@id/campoNombre"
         android:text="@string/cine"
+        android:textColor="@color/black"
         android:textSize="16sp" />
 
     <CheckBox
@@ -204,6 +221,7 @@
         android:layout_marginStart="32dp"
         android:layout_toEndOf="@id/Cine"
         android:text="@string/m_sica"
+        android:textColor="@color/black"
         android:textSize="16sp" />
 
     <CheckBox
@@ -213,6 +231,7 @@
         android:layout_below="@id/Cine"
         android:layout_alignStart="@id/Cine"
         android:text="@string/deporte"
+        android:textColor="@color/black"
         android:textSize="16sp" />
 
     <CheckBox
@@ -222,6 +241,7 @@
         android:layout_below="@id/Musica"
         android:layout_alignStart="@id/Musica"
         android:text="@string/naturaleza"
+        android:textColor="@color/black"
         android:textSize="16sp" />
 
     <TextView
@@ -232,6 +252,7 @@
         android:layout_alignStart="@id/Nombre"
         android:gravity="center"
         android:text="@string/cv_resumido"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -253,7 +274,7 @@
         android:layout_height="72dp"
         android:layout_below="@id/CVResumido"
         android:layout_alignStart="@id/Nombre"
-        android:background="@color/white"
+        android:background="@color/gris"
         android:contentDescription="@string/cancelar"
         android:scaleType="centerInside"
         android:src="@drawable/cancelar96" />
@@ -264,7 +285,7 @@
         android:layout_height="72dp"
         android:layout_below="@id/CVResumido"
         android:layout_alignEnd="@id/CVResumido"
-        android:background="@color/white"
+        android:background="@color/gris"
         android:scaleType="centerInside"
         android:src="@drawable/check96"
         tools:ignore="SpeakableTextPresentCheck" />
