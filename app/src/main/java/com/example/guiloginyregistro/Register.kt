@@ -9,7 +9,6 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class Register : AppCompatActivity() {
 
@@ -20,10 +19,10 @@ class Register : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         // Setup
-        setup()
+        reg()
     }
 
-    private fun setup(){
+    private fun reg(){
 
         title = "Autenticación"
 
@@ -39,7 +38,8 @@ class Register : AppCompatActivity() {
                     pass.text.toString()).addOnCompleteListener {
                         if (it.isSuccessful){
                             Log.d(TAG, "Creado nuevo usuario")
-                            val registrado : Intent = Intent (this, MainActivity::class.java)
+                            val registrado = Intent (this, MainActivity::class.java)
+                            startActivity(registrado)
                         } else {
                             showAlert()
                         }

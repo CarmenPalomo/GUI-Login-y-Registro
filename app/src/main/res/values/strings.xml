@@ -19,6 +19,11 @@
     <string name="m_sica">Música</string>
     <string name="naturaleza">Naturaleza</string>
     <string name="cancelar">TODO</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="bienvenido">Bienvenido</string>
     <string-array name="Nacionalidad">
         <item>España</item>
         <item>Portugal</item>
