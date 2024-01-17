@@ -160,7 +160,7 @@
         android:layout_alignStart="@id/Nombre"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Aficiones:"
+        android:text="@string/aficiones"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -170,7 +170,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/Aficion"
         android:layout_alignStart="@id/campoNombre"
-        android:text="Cine"
+        android:text="@string/cine"
         android:textSize="16sp" />
 
     <CheckBox
@@ -178,9 +178,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/Aficion"
-        android:layout_marginLeft="32dp"
-        android:layout_toRightOf="@id/Cine"
-        android:text="Música"
+        android:layout_marginStart="32dp"
+        android:layout_toEndOf="@id/Cine"
+        android:text="@string/m_sica"
         android:textSize="16sp" />
 
     <CheckBox
@@ -189,7 +189,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Cine"
         android:layout_alignStart="@id/Cine"
-        android:text="Deporte"
+        android:text="@string/deporte"
         android:textSize="16sp" />
 
     <CheckBox
@@ -198,7 +198,50 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Musica"
         android:layout_alignStart="@id/Musica"
-        android:text="Naturaleza"
+        android:text="@string/naturaleza"
         android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/CVResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/Naturaleza"
+        android:layout_alignStart="@id/Nombre"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/cv_resumido"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/CVResumido"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_below="@id/CVResumen"
+        android:layout_alignStart="@id/Nombre"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:hint="@string/resumen"
+        tools:ignore="Autofill,TextFields" />
+
+    <ImageButton
+        android:id="@+id/Cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CVResumido"
+        android:layout_alignStart="@id/Nombre"
+        android:src="@android:drawable/btn_star"
+        android:contentDescription="@string/cancelar" />
+
+    <ImageButton
+        android:id="@+id/Registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CVResumido"
+        android:layout_alignEnd="@id/CVResumido"
+        android:src="@android:drawable/btn_star"
+        tools:ignore="SpeakableTextPresentCheck" />
+
 
 </RelativeLayout>

@@ -11,6 +11,14 @@
     <string name="mujer">Mujer</string>
     <string name="nacionalidad">Nacionalidad:</string>
     <string name="sexo">Sexo:</string>
+    <string name="aficiones">Aficiones:</string>
+    <string name="cv_resumido">CV resumido:</string>
+    <string name="resumen">Resumen</string>
+    <string name="cine">Cine</string>
+    <string name="deporte">Deporte</string>
+    <string name="m_sica">Música</string>
+    <string name="naturaleza">Naturaleza</string>
+    <string name="cancelar">TODO</string>
     <string-array name="Nacionalidad">
         <item>España</item>
         <item>Portugal</item>
