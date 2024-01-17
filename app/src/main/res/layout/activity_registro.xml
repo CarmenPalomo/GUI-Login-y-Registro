@@ -10,6 +10,7 @@
         android:id="@+id/NombreUsuario"
         android:layout_width="152dp"
         android:layout_height="35dp"
+        android:gravity="center"
         android:text="Nombre Usuario: "
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,18 +23,22 @@
     <EditText
         android:id="@+id/editText"
         android:layout_width="187dp"
-        android:layout_height="37dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NombreUsuario"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.099" />
 
     <TextView
         android:id="@+id/Contraseña"
-        android:layout_width="145dp"
+        android:layout_width="152dp"
         android:layout_height="35dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
         android:text="Contraseña: "
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,12 +50,12 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="190dp"
+        android:layout_width="187dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="24dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toEndOf="@+id/Contraseña"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.185" />

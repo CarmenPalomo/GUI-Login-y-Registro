@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">GUI Login y Registro</string>
     <string name="usuario">Usuario:</string>
+    <string name="nombre">Nombre:</string>
+    <string name="contrasegna">Contraseña:</string>
+    <string name="introducir_contrasegna">Introducir Contraseña</string>
+    <string name="introducir_nombre">Introducir Nombre</string>
+    <string name="repetir_contrasegna">Repetir Contraseña</string>
+    <string name="repetir_contrasena">Repetir Contraseña:</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="nacionalidad">Nacionalidad:</string>
+    <string name="sexo">Sexo:</string>
+    <string-array name="Nacionalidad">
+        <item>España</item>
+        <item>Portugal</item>
+        <item>Perú</item>
+        <item>Ecuador</item>
+        <item>Argentina</item>
+    </string-array>
 </resources>

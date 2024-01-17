@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Registro"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="@string/nombre"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/campoNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignBaseline="@id/Nombre"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/Nombre"
+        android:ems="10"
+        android:hint="@string/introducir_nombre"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/Contrasegna"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/Nombre"
+        android:layout_alignStart="@id/Nombre"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/contrasegna"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/campoContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/Contrasegna"
+        android:layout_alignStart="@id/campoNombre"
+        android:ems="10"
+        android:hint="@string/introducir_contrasegna"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
+        tools:ignore="Autofill,TextFields" />
+
+    <TextView
+        android:id="@+id/repetirContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/Contrasegna"
+        android:layout_alignStart="@id/Contrasegna"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/repetir_contrasena"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/campoRepetirContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/repetirContraseña"
+        android:layout_alignStart="@id/campoNombre"
+        android:ems="10"
+        android:hint="@string/repetir_contrasegna"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
+        tools:ignore="Autofill,TextFields" />
+
+    <TextView
+        android:id="@+id/sex1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/repetirContraseña"
+        android:layout_alignStart="@id/Nombre"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/sexo"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/Sex_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/campoRepetirContraseña"
+        android:layout_alignStart="@id/campoNombre"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/Hombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hombre"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/Mujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mujer"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Pais"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/sex1"
+        android:layout_alignStart="@id/Nombre"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/nacionalidad"
+        android:textSize="16sp"
+        android:textStyle="bold"  />
+
+    <Spinner
+        android:id="@+id/EscogeNacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/Pais"
+        android:layout_alignStart="@id/campoNombre"
+        android:layout_alignEnd="@id/campoNombre"
+        android:entries="@array/Nacionalidad"
+        android:minHeight="48dp"
+        android:scrollbarSize="16dp" />
+
+    <TextView
+        android:id="@+id/Aficion"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/Pais"
+        android:layout_alignStart="@id/Nombre"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Aficiones:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/Cine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/Aficion"
+        android:layout_alignStart="@id/campoNombre"
+        android:text="Cine"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/Musica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/Aficion"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@id/Cine"
+        android:text="Música"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/Deporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Cine"
+        android:layout_alignStart="@id/Cine"
+        android:text="Deporte"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/Naturaleza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Musica"
+        android:layout_alignStart="@id/Musica"
+        android:text="Naturaleza"
+        android:textSize="16sp" />
+
+</RelativeLayout>
