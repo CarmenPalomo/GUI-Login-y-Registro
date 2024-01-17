@@ -3,6 +3,7 @@ package com.example.guiloginyregistro
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +15,11 @@ class MainActivity : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putString("message","Integración de mensaje completa")
         analytics.logEvent("InitScreen", bundle)
+
+
     }
+
+
 
 
 }

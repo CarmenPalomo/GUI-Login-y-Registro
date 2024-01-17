@@ -5,8 +5,8 @@
     <string name="contrasegna">Contraseña:</string>
     <string name="introducir_contrasegna">Introducir Contraseña</string>
     <string name="introducir_nombre">Introducir Nombre</string>
-    <string name="repetir_contrasegna">Repetir Contraseña</string>
-    <string name="repetir_contrasena">Repetir Contraseña:</string>
+    <string name="repetir_contrasegna">Confirmar Contraseña</string>
+    <string name="repetir_contrasena">Confirmar Contraseña:</string>
     <string name="hombre">Hombre</string>
     <string name="mujer">Mujer</string>
     <string name="nacionalidad">Nacionalidad:</string>

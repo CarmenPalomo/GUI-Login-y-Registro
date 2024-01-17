@@ -45,14 +45,16 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    // Importamos la Firebase BoM
+    // Importamos la Firebase BoM (se supone que contiene todas las librerías)
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     // TODO: Add the dependencies for Firebase products you want to use
     // Implementamos google analytics
     implementation("com.google.firebase:firebase-analytics")
     // Implementamos la plataforma de autentificación
     implementation("com.google.firebase:firebase-auth-ktx")
-    // Add the dependencies for any other desired Firebase products
+    // Implementación de Realtime Database
+    implementation("com.google.firebase:firebase-database-ktx")
+    // Si queremos añadir más librerías podemos consultar las que hay en
     // https://firebase.google.com/docs/android/setup#available-libraries
 
 }

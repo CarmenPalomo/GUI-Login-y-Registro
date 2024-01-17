@@ -35,7 +35,7 @@
         android:layout_alignBaseline="@id/Nombre"
         android:layout_alignParentStart="false"
         android:layout_alignParentEnd="false"
-        android:layout_marginStart="90dp"
+        android:layout_marginStart="108dp"
         android:layout_marginEnd="16dp"
         android:layout_toEndOf="@id/Nombre"
         android:ems="10"
@@ -46,12 +46,40 @@
         tools:ignore="Autofill" />
 
     <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Email:"
+        android:layout_below="@id/Nombre"
+        android:layout_alignStart="@id/Nombre"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/campoEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignBaseline="@id/email"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignStart="@id/campoNombre"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/Nombre"
+        android:ems="10"
+        android:hint="Introducir email"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
+        tools:ignore="Autofill" />
+
+    <TextView
         android:id="@+id/Contrasegna"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_below="@id/Nombre"
+        android:layout_below="@id/email"
         android:layout_alignStart="@id/Nombre"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/contrasegna"
         android:textSize="16sp"
@@ -75,7 +103,6 @@
         android:layout_height="48dp"
         android:layout_below="@id/Contrasegna"
         android:layout_alignStart="@id/Contrasegna"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/repetir_contrasena"
         android:textSize="16sp"
@@ -99,7 +126,6 @@
         android:layout_height="48dp"
         android:layout_below="@id/repetirContraseña"
         android:layout_alignStart="@id/Nombre"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/sexo"
         android:textSize="16sp"
@@ -111,7 +137,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/campoRepetirContraseña"
         android:layout_alignStart="@id/campoNombre"
-        android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -135,7 +160,6 @@
         android:layout_height="48dp"
         android:layout_below="@id/sex1"
         android:layout_alignStart="@id/Nombre"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/nacionalidad"
         android:textSize="16sp"
@@ -158,7 +182,6 @@
         android:layout_height="48dp"
         android:layout_below="@id/Pais"
         android:layout_alignStart="@id/Nombre"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/aficiones"
         android:textSize="16sp"
@@ -207,7 +230,6 @@
         android:layout_height="48dp"
         android:layout_below="@id/Naturaleza"
         android:layout_alignStart="@id/Nombre"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/cv_resumido"
         android:textSize="16sp"
@@ -216,31 +238,35 @@
     <EditText
         android:id="@+id/CVResumido"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="144dp"
         android:layout_below="@id/CVResumen"
         android:layout_alignStart="@id/Nombre"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/style_borde"
         android:gravity="center"
         android:hint="@string/resumen"
         tools:ignore="Autofill,TextFields" />
 
     <ImageButton
         android:id="@+id/Cancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_below="@id/CVResumido"
         android:layout_alignStart="@id/Nombre"
-        android:src="@android:drawable/btn_star"
-        android:contentDescription="@string/cancelar" />
+        android:background="@color/white"
+        android:contentDescription="@string/cancelar"
+        android:scaleType="centerInside"
+        android:src="@drawable/cancelar96" />
 
     <ImageButton
         android:id="@+id/Registrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_below="@id/CVResumido"
         android:layout_alignEnd="@id/CVResumido"
-        android:src="@android:drawable/btn_star"
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/check96"
         tools:ignore="SpeakableTextPresentCheck" />
 
 
