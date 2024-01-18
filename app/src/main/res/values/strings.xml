@@ -24,6 +24,8 @@
     <string name="email">Email</string>
     <string name="contrase_a">Contraseña</string>
     <string name="bienvenido">Bienvenido</string>
+    <string name="introducir_email">Introducir email</string>
+    <string name="mail">Email:</string>
     <string-array name="Nacionalidad">
         <item>España</item>
         <item>Portugal</item>

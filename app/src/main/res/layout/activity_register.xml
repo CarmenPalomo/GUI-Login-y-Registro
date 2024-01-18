@@ -44,7 +44,8 @@
         android:hint="@string/introducir_nombre"
         android:inputType="text"
         android:minHeight="48dp"
-        android:textColorHint="#8D6E63"
+        android:textColor="@color/black"
+        android:textColorHint="#795548"
         tools:ignore="Autofill" />
 
     <TextView
@@ -54,7 +55,7 @@
         android:layout_below="@id/Nombre"
         android:layout_alignStart="@id/Nombre"
         android:gravity="center"
-        android:text="Email:"
+        android:text="@string/mail"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -65,17 +66,18 @@
         android:layout_height="wrap_content"
         android:layout_alignWithParentIfMissing="false"
         android:layout_alignBaseline="@id/email"
+        android:layout_alignStart="@id/campoNombre"
         android:layout_alignParentStart="false"
         android:layout_alignParentEnd="false"
-        android:layout_alignStart="@id/campoNombre"
         android:layout_marginEnd="16dp"
         android:layout_toEndOf="@id/Nombre"
         android:ems="10"
-        android:hint="Introducir email"
+        android:hint="@string/introducir_email"
         android:inputType="text"
         android:minHeight="48dp"
-        android:textColorHint="#8D6E63"
-        tools:ignore="Autofill" />
+        android:textColor="@color/black"
+        android:textColorHint="#795548"
+        tools:ignore="Autofill,TextFields" />
 
     <TextView
         android:id="@+id/Contrasegna"
@@ -98,8 +100,9 @@
         android:ems="10"
         android:hint="@string/introducir_contrasegna"
         android:minHeight="48dp"
-        android:textColorHint="#8D6E63"
-        tools:ignore="Autofill,TextFields" />
+        android:textColor="@color/black"
+        android:textColorHint="#795548"
+        tools:ignore="Autofill,TextFields,TextContrastCheck" />
 
     <TextView
         android:id="@+id/repetirContraseña"
@@ -122,7 +125,8 @@
         android:ems="10"
         android:hint="@string/repetir_contrasegna"
         android:minHeight="48dp"
-        android:textColorHint="#8D6E63"
+        android:textColor="@color/black"
+        android:textColorHint="#795548"
         tools:ignore="Autofill,TextFields" />
 
     <TextView
@@ -149,22 +153,26 @@
             android:id="@+id/Hombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
             android:text="@string/hombre"
             android:textColor="@color/black"
             android:textColorHighlight="@color/black"
             android:textColorHint="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
             android:id="@+id/Mujer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/black"
             android:text="@string/mujer"
             android:textColor="@color/black"
             android:textColorHighlight="@color/black"
             android:textColorHint="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
 
     <TextView
@@ -186,7 +194,7 @@
         android:layout_alignBaseline="@id/Pais"
         android:layout_alignStart="@id/campoNombre"
         android:layout_alignEnd="@id/campoNombre"
-        android:backgroundTint="@color/black"
+        android:background="@color/azulmarino"
         android:entries="@array/Nacionalidad"
         android:minHeight="48dp"
         android:scrollbarSize="16dp" />
@@ -209,6 +217,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/Aficion"
         android:layout_alignStart="@id/campoNombre"
+        android:buttonTint="@color/black"
+        android:minHeight="48dp"
         android:text="@string/cine"
         android:textColor="@color/black"
         android:textSize="16sp" />
@@ -220,6 +230,8 @@
         android:layout_alignBaseline="@id/Aficion"
         android:layout_marginStart="32dp"
         android:layout_toEndOf="@id/Cine"
+        android:buttonTint="@color/black"
+        android:minHeight="48dp"
         android:text="@string/m_sica"
         android:textColor="@color/black"
         android:textSize="16sp" />
@@ -230,6 +242,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Cine"
         android:layout_alignStart="@id/Cine"
+        android:buttonTint="@color/black"
+        android:minHeight="48dp"
         android:text="@string/deporte"
         android:textColor="@color/black"
         android:textSize="16sp" />
@@ -240,6 +254,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Musica"
         android:layout_alignStart="@id/Musica"
+        android:buttonTint="@color/black"
+        android:minHeight="48dp"
         android:text="@string/naturaleza"
         android:textColor="@color/black"
         android:textSize="16sp" />
@@ -266,6 +282,7 @@
         android:background="@drawable/style_borde"
         android:gravity="center"
         android:hint="@string/resumen"
+        android:textColor="@color/black"
         tools:ignore="Autofill,TextFields" />
 
     <ImageButton
@@ -288,7 +305,7 @@
         android:background="@color/gris"
         android:scaleType="centerInside"
         android:src="@drawable/check96"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
 
 </RelativeLayout>
