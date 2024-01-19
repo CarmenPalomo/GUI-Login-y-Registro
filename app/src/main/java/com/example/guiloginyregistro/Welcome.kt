@@ -1,5 +1,6 @@
 package com.example.guiloginyregistro
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,7 +13,8 @@ class Welcome : AppCompatActivity() {
         val deslog : Button = findViewById(R.id.desloguear)
 
         deslog.setOnClickListener {
-            onBackPressed()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

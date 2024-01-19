@@ -27,6 +27,7 @@
     <string name="introducir_email">Introducir email</string>
     <string name="mail">Email:</string>
     <string-array name="Nacionalidad">
+        <item>Selecciona...</item>
         <item>España</item>
         <item>Portugal</item>
         <item>Perú</item>

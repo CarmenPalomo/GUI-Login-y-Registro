@@ -194,7 +194,6 @@
         android:layout_alignBaseline="@id/Pais"
         android:layout_alignStart="@id/campoNombre"
         android:layout_alignEnd="@id/campoNombre"
-        android:background="@color/azulmarino"
         android:entries="@array/Nacionalidad"
         android:minHeight="48dp"
         android:scrollbarSize="16dp" />
@@ -283,6 +282,7 @@
         android:gravity="center"
         android:hint="@string/resumen"
         android:textColor="@color/black"
+        android:textColorHint="@color/azulmarino"
         tools:ignore="Autofill,TextFields" />
 
     <ImageButton

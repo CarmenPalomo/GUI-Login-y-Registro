@@ -8,15 +8,21 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.Firebase
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
+
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.inicio)
 
+        auth = Firebase.auth
         // Evento personalizado para Google Analytics
         val analytics : FirebaseAnalytics = FirebaseAnalytics.getInstance(this)
         val bundle = Bundle()
@@ -37,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         login.setOnClickListener{
             if (email.text.isNotEmpty() && pass.text.isNotEmpty()){
 
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(email.text.toString(),
+                auth.signInWithEmailAndPassword(email.text.toString(),
                     pass.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful){
                         Log.d(ContentValues.TAG, "Login de usuario")
