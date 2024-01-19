@@ -49,10 +49,13 @@ class Register : AppCompatActivity() {
                         val registrado = Intent(this, MainActivity::class.java)
                         startActivity(registrado)
                     } else {
-                        showAlert()
+                        showAlert("Error creando el usuario")
                     }
                 }
-                }
+                } else {
+                    showAlert("Error, contraseñas distintas")
+                    }
+
             }
         }
 
@@ -62,11 +65,11 @@ class Register : AppCompatActivity() {
         }
     }
 
-    private fun showAlert(){
+    private fun showAlert(mensaje : String){
         //Log.d(TAG, "Error creando nuevo usuario")
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error autenticando al usuario")
+        builder.setMessage(mensaje)
         builder.setPositiveButton("Aceptar",null)
         val dialog: AlertDialog = builder.create()
         dialog.show()

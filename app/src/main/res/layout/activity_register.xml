@@ -89,7 +89,7 @@
         android:text="@string/contrasegna"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/campoContraseña"
@@ -102,6 +102,7 @@
         android:minHeight="48dp"
         android:textColor="@color/black"
         android:textColorHint="#795548"
+        android:inputType="textPassword"
         tools:ignore="Autofill,TextFields,TextContrastCheck" />
 
     <TextView
@@ -127,6 +128,7 @@
         android:minHeight="48dp"
         android:textColor="@color/black"
         android:textColorHint="#795548"
+        android:inputType="textPassword"
         tools:ignore="Autofill,TextFields" />
 
     <TextView
