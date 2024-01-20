@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                     if (it.isSuccessful){
                         Log.d(ContentValues.TAG, "Login de usuario")
                         val logueado = Intent (this, Welcome::class.java)
+                        logueado.putExtra("email",email.text.toString())
                         startActivity(logueado)
                     } else {
                         showAlert()

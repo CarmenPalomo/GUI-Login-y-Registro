@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "811163646496",
+    "firebase_url": "https://gui-login-y-registro-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "gui-login-y-registro",
     "storage_bucket": "gui-login-y-registro.appspot.com"
   },
@@ -12,7 +13,12 @@
           "package_name": "com.example.guiloginyregistro"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "811163646496-6ter18dp1rblcsn463d5lgk2v4frdio8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBAwNVIfMiEKBAiqyySkqNbcon4XMy7Pzo"
@@ -20,7 +26,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811163646496-6ter18dp1rblcsn463d5lgk2v4frdio8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

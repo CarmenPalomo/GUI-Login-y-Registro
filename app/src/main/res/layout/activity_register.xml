@@ -196,6 +196,7 @@
         android:layout_alignBaseline="@id/Pais"
         android:layout_alignStart="@id/campoNombre"
         android:layout_alignEnd="@id/campoNombre"
+        android:background="@color/azulmarino"
         android:entries="@array/Nacionalidad"
         android:minHeight="48dp"
         android:scrollbarSize="16dp" />
