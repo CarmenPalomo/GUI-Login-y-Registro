@@ -1,6 +1,6 @@
 package com.example.guiloginyregistro
 
-import android.content.ContentValues.TAG
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,16 +13,16 @@ import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
-import android.widget.Toast
+
 import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.MutableLiveData
+
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.database
+
 
 class Register : AppCompatActivity() {
 
@@ -47,14 +47,14 @@ class Register : AppCompatActivity() {
         val nom: EditText = findViewById(R.id.campoNombre)
         val sex: RadioGroup = findViewById(R.id.Sex_radio)
         val nac: Spinner = findViewById(R.id.EscogeNacion)
-        var sexo : String = ""
-        var nacion : String = ""
+        var sexo = ""
+        var nacion = ""
 
         // Creamos un adaptador para el spinner para recoger lo seleccionado y darle un estilo
         val opcionesNac: Array<String> = resources.getStringArray(R.array.Nacionalidad)
         val adapterNacionalidad: ArrayAdapter<String> =
             ArrayAdapter(this, R.layout.spinner1, opcionesNac)
-        adapterNacionalidad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapterNacionalidad.setDropDownViewResource(R.layout.spinner_dropdown_item)
 
         nac.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -125,8 +125,10 @@ class Register : AppCompatActivity() {
     }
 
     private fun datosUsuario (correo : String, nombre : String,sexo : String,nacionalidad : String){
+        // Creamos una variable para obtener la id del usuario que se loguea
         val usuarioActual : FirebaseUser? = auth.currentUser
         if (usuarioActual !=null) {
+            // insertamos los datos del usuario actual en nuestra Base de Datos
             val user = Usuario (correo, nombre,sexo,nacionalidad)
             usuariosRef.child(usuarioActual.uid).setValue(user)
         } else {
