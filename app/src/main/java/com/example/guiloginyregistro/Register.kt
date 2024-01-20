@@ -1,6 +1,7 @@
 package com.example.guiloginyregistro
 
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,6 +16,7 @@ import android.widget.RadioGroup
 import android.widget.Spinner
 
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -53,7 +55,7 @@ class Register : AppCompatActivity() {
         // Creamos un adaptador para el spinner para recoger lo seleccionado y darle un estilo
         val opcionesNac: Array<String> = resources.getStringArray(R.array.Nacionalidad)
         val adapterNacionalidad: ArrayAdapter<String> =
-            ArrayAdapter(this, R.layout.spinner1, opcionesNac)
+            ArrayAdapter(this, R.layout.spinner1,opcionesNac)
         adapterNacionalidad.setDropDownViewResource(R.layout.spinner_dropdown_item)
 
         nac.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

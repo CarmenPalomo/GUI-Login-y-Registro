@@ -36,9 +36,6 @@ class Welcome : AppCompatActivity() {
         val deslog : Button = findViewById(R.id.desloguear)
         saludo = findViewById(R.id.welcome)
 
-        // Si se conecta debería parecer el mensaje prestablecido en nuestra base de datos
-        // pruebaConex()
-
 
         obtenerNombre { nombreUsuario ->
             saludo.text = "Hola, $nombreUsuario"
